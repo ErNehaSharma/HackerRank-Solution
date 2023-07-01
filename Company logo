@@ -1,0 +1,12 @@
+solution for this is:
+
+from collections import Counter
+
+company_name = input()
+
+char_count = Counter(company_name)
+sorted_chars = sorted(char_count.items(), key=lambda x: (-x[1], x[0]))  # Sort by count (descending) and then alphabetically
+
+for i in range(min(3, len(sorted_chars))):  # Print up to three characters or all distinct characters if less than three
+    char, count = sorted_chars[i]
+    print(char, count)
