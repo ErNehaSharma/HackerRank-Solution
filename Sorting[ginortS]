@@ -1,0 +1,19 @@
+solution for this code is here
+
+s = input()
+
+def sorting_key(c):
+    if c.islower():
+        return (0, c)  # Sort lowercase letters first
+    elif c.isupper():
+        return (1, c)  # Sort uppercase letters after lowercase letters
+    elif c.isdigit():
+        if int(c) % 2 == 1:
+            return (2, c)  # Sort odd digits after letters
+        else:
+            return (3, c)  # Sort even digits after odd digits
+    else:
+        return (4, c)  # Sort other characters at the end
+
+sorted_string = ''.join(sorted(s, key=sorting_key))
+print(sorted_string)
