@@ -17,3 +17,19 @@ Sample Output 0
 
 56.00
 ____________________________________________________________________________________________
+solution for this code is 
+n = int(input())
+student_marks = {}
+
+for _ in range(n):
+    line = input().split()
+    name = line[0]
+    marks = list(map(float, line[1:]))
+    student_marks[name] = marks
+
+query_name = input()
+marks = student_marks[query_name]
+average_marks = sum(marks) / len(marks)
+print("{:.2f}".format(average_marks))
+________________________________________________________________________________________________
+you can use this code to pass all test cases
