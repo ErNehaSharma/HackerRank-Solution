@@ -1,0 +1,11 @@
+Solution is  
+x = int(input())
+y = int(input())
+z = int(input())
+n = int(input())
+
+coordinates = [[i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if sum([i, j, k]) != n]
+
+print(coordinates)
+
+if you run this code you can pass all the test case
